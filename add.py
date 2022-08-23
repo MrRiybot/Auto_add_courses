@@ -3,7 +3,6 @@ from selenium.webdriver.common.keys import Keys
 import time
 from datetime import datetime
 from selenium.webdriver.chrome.options import Options
-import winsound
 
 class ADD:
 
@@ -33,7 +32,6 @@ class ADD:
                 action.click()
                 for i in range(5):
                     state = False
-                    winsound.Playsound('alarm.wav')
             except:
                 continue
         return driver
