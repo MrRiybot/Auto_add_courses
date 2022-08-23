@@ -18,7 +18,7 @@ Auto_add_courses required python, selinum, chromedriver to run
 
 
 ```
-pip install selinum
+pip install selenium
 ```
 For chrome driver install it here https://chromedriver.chromium.org/downloads then put the driver on the Auto-add-courses folder
 
