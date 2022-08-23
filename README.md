@@ -1,4 +1,5 @@
-# Auto_add_courses
+# Auto_add_courses V1.1.1.2
+### الحين يمديك تحاول تضيف اكثر من شعبة وحده!
 ### this tool enhance the Probability of adding a specific course in KSU (الحذف والاضافة)
 
 
