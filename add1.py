@@ -3,6 +3,7 @@ from selenium.webdriver.common.keys import Keys
 import time
 from datetime import datetime
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
 
 class ADD:
 
@@ -19,21 +20,21 @@ class ADD:
         state = True
         while state:
             for s in sections:
-                action = driver.find_element_by_id('saveBut1')
+                action = driver.find_element(By.ID, 'saveBut1')
                 action.click()
                 time.sleep(1)
-                action = driver.find_element_by_xpath('//*[@id="addSection0"]')
+                action = driver.find_element(By.XPATH, '//*[@id="addSection0"]')
                 action.send_keys(s)
-                action = driver.find_element_by_xpath('//*[@id="left"]/div[3]/form/table[5]/tbody/tr[2]/td/table/tbody/tr/td[4]/a')
+                action = driver.find_element(By.XPATH, '//*[@id="left"]/div[3]/form/table[5]/tbody/tr[2]/td/table/tbody/tr/td[4]/a')
                 action.click()
                 time.sleep(2)
             try:
-                action = driver.find_element_by_xpath('//*[@id="successAddDiv"]/table/tbody/tr[1]/td/table/tbody/tr[2]/td/table/tbody/tr/td[2]/a')
+                action = driver.find_element(By.XPATH, '//*[@id="successAddDiv"]/table/tbody/tr[1]/td/table/tbody/tr[2]/td/table/tbody/tr/td[2]/a')
                 action.click()
                 for i in range(5):
                     state = False
             except:
                 time.sleep(1)
-                action = driver.find_element_by_xpath('//*[@id="errorAddDiv"]/table/tbody/tr[1]/td/table/tbody/tr/td/a')
+                action = driver.find_element(By.XPATH, '//*[@id="errorAddDiv"]/table/tbody/tr[1]/td/table/tbody/tr/td/a')
                 action.click()
         return driver
